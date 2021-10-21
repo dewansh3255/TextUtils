@@ -19,19 +19,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 from . import views
 
-# urlpatterns = [
-#     path('admin/', admin.site.urls),
-#     path('', views.index, name='index'),
-#     path('about', views.about, name='about')
-# ]
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('contact', views.contact, name='contact'),
     path('about', views.about, name='about'),
     path('analyze', views.analyze, name='analyze'),
-    # path('capitalzefirst', views.capitalzefirst, name='capitalzefirst'),
-    # path('newlineremove', views.newlineremove, name='newlineremove'),
-    # path('spaceremove', views.spaceremove, name='spaceremove'),
-    # path('charcount', views.charcount, name='charcount'),
 ]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
