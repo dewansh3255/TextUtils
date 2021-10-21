@@ -43,6 +43,8 @@
   <div class="container">
       <br>
       <form action='/analyze' method='post'> {% csrf_token %}
+<!--     THE CSRF token has been added here so that we can work with POST method, if we try to remove the token, then we'll get multiple errors.
+     So in the way to avoid them we should then try and use GET method-->
           <textarea class="form-control" name="text" id="exampleFormControlTextarea1" style=" border: 5px solid black; border-radius:28px;" rows="9"></textarea>
       <br>
 
